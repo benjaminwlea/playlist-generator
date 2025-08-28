@@ -11,6 +11,9 @@ public class Track
        Artist = artist;
     }
 
-    
+    public override string ToString()
+    {
+        return $"\"{Name}\" by {Artist.Name}";
+    }
     
 }

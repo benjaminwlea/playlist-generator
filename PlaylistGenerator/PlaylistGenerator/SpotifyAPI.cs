@@ -5,6 +5,8 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
+namespace PlaylistGenerator;
+
 class PlayList
     
 {
@@ -16,6 +18,7 @@ class PlayList
 
     static async Task Main(string[] args)
     {
+        
         var playlistId = "4ftVVVOSYoxupshTo9x8k3";
         var songID = "4uLU6hMCjMI75M1A2tKUQC"; // Example track ID
 
@@ -35,6 +38,35 @@ class PlayList
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
+        
+        /*
+        var lastFmApiKey = Environment.GetEnvironmentVariable("LastFmApiKey");
+
+        List<Track> tracks = new List<Track>();
+        tracks.Add(new Track("Africa", new Artist("Toto")));
+        tracks.Add(new Track("Thriller", new Artist("Michael Jackson")));
+        tracks.Add(new Track("Land of Confusion", new Artist("Genesis")));
+        
+        List<Track> generatedTracks = new List<Track>();
+        try
+        {
+            generatedTracks = await PlaylistBuilder.GeneratePlaylist(tracks, lastFmApiKey);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+
+        foreach (Track t in generatedTracks)
+        {
+            Console.WriteLine(t);
+        }
+        */
+
+
+
+
+
     }
     public static async Task AddTracksToPlaylistAsync(string playlistId, string[] trackUris)
     {
